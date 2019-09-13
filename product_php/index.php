@@ -40,7 +40,7 @@ include_once("config/database.php");
                     <?php
                         if(isset($_POST["insert"])) {
                             echo "<script>window.open('insert.php','_self')</script>";
-                        } 
+                        }
                     ?>
                     <?php
 
@@ -66,6 +66,7 @@ include_once("config/database.php");
                             <td> <?php  echo $product_quantity; ?>       </td>
                             <td> <?php  echo $product_descriptions; ?>   </td>
                         </tr>
+
                     <?php } ?>
                     </tbody>
                 </table>
@@ -77,5 +78,4 @@ include_once("config/database.php");
 </div>
 </body>
 </html>
-
 
