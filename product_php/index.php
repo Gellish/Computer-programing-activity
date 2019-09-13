@@ -6,6 +6,8 @@ include_once("config/database.php");
 <head>
     <title></title>
     <link rel="stylesheet" href="assets/css/bootstrap/bootstrap.css">
+    <link rel="stylesheet" href="assets/font/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/css/customs/color-fonts.css">
 </head>
 <body>
 <div class="container">
@@ -32,6 +34,8 @@ include_once("config/database.php");
                         <th> Product Price</th>
                         <th> Product Quantity</th>
                         <th> Product Description</th>
+                        <th> </th>
+                        <th> </th>
                     </tr>
                     </thead>
 
@@ -65,6 +69,17 @@ include_once("config/database.php");
                             <td> <?php  echo $product_price; ?>          </td>
                             <td> <?php  echo $product_quantity; ?>       </td>
                             <td> <?php  echo $product_descriptions; ?>   </td>
+                            <td> 
+                            <i class="fa fa-trash red"></i>
+                            <a href="delete.php?delete_product=<?php echo $product_id; ?>">
+                             Delete
+                            </a> 
+
+                            </td>
+                            <td> 
+                            <i class="fa fa-pencil blue"></i>
+                            <a href="edit.php?edit_product=<?php echo $product_id; ?>">Edit</a>
+                            </td>
                         </tr>
 
                     <?php } ?>
